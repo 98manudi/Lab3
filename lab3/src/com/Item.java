@@ -32,7 +32,7 @@ public class Item {
 		 }
 		 
 		 // create a prepared statement
-		 String query = " insert into item (`itemID`,`itemCode`,`itemName`,`itemPrice`,`itemDesc`)" + " values (?, ?, ?, ?, ?)";
+		 String query = " insert into item (itemID,itemCode,itemName,itemPrice,itemDesc)" + " values (?, ?, ?, ?, ?)";
 		 PreparedStatement preparedStmt = con.prepareStatement(query);
 		 
 		 // binding values
