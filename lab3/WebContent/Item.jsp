@@ -10,6 +10,28 @@
 		 request.getParameter("itemDesc"));
 		 session.setAttribute("statusMsg", stsMsg);
 		 }
+		 
+		 //Delete item----------------------------------
+	if (request.getParameter("itemID") != null)
+	  {
+		
+			item itemObj = new item();
+			
+			String stsMsg = itemObj.deleteItem(request.getParameter("itemID"));
+			
+			session.setAttribute("statusMsg", stsMsg);
+	}
+	//Update item----------------------------------
+    if (request.getParameter("itemID") != null)
+	{
+		
+		item itemObj = new item();
+	String stsMsg2 = itemObj.updateItem(request.getParameter("itemCode"),
+	request.getParameter("itemName"),
+	request.getParameter("itemPrice"),
+	request.getParameter("itemDesc"));
+	session.setAttribute("statusMsg", stsMsg2);
+	}
 	%>
     
 <!DOCTYPE html>
